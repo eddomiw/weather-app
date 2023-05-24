@@ -1,6 +1,8 @@
 form {
   border: 1px solid black;
   width: fit-content;
+  display: flex;
+  justify-content: space-between;
 }
 
 #search-bar,
@@ -11,4 +13,5 @@ form {
 #search-bar {
   background-color: transparent;
   border: 0px solid;
+  width: min(205px, 70%);
 }
