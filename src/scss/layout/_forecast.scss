@@ -11,19 +11,19 @@
   .third-container {
     flex-direction: row;
     justify-content: space-around;
-    gap: 0;
+    gap: 1;
   }
 
   .hourly,
   .weekly {
-    width: min(275px, 35%);
+    width: max(275px, 35%);
   }
 }
 
 @media (max-width: 768px) {
   .hourly,
   .weekly {
-    width: max(180px, 35%);
+    width: clamp(250px, 75%, 300px);
   }
 }
 
