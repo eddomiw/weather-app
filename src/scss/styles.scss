@@ -1,25 +1,14 @@
 @forward "./base/normalize.css";
+@forward "./base/base.scss";
 
-html,
-body {
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-
-body {
-  padding: 1.25em;
+* {
+  outline: 1px solid black;
 }
 
 section {
   padding: 1em;
-  border: solid 1px black;
   display: flex;
   justify-content: center;
-}
-
-form {
-  border: solid 1px black;
-  width: fit-content;
 }
 
 #search-bar,
@@ -35,37 +24,31 @@ form {
 .weather-condition,
 .location {
   text-align: center;
-  border: solid 1px black;
 }
 
 .temp {
   display: flex;
   justify-content: center;
-  border: solid 1px black;
 }
 
 .temp * {
-  border: solid 1px black;
   margin: 0.15em;
 }
 
 .third-container {
   width: 75%;
-  border: solid 1px black;
   display: flex;
   justify-content: space-around;
 }
 
 .hourly,
 .weekly {
-  border: solid 1px black;
   width: 25%;
   text-align: center;
 }
 
 .days-container,
 .hours-container {
-  border: solid 1px black;
   /*   Need to adjust height to make sure it is responsive change 250px*/
   height: 250px;
   display: flex;
@@ -76,7 +59,6 @@ form {
 
 .days,
 .hours {
-  border: solid 1px black;
   display: grid;
   row-gap: 1em;
   grid-template-columns: 1fr 1fr;
