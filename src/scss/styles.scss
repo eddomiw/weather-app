@@ -1,5 +1,9 @@
 @forward "./base/normalize.css";
 @forward "./base/base.scss";
+@forward "./layout/form.scss";
+@forward "./layout/weather-display.scss";
+@forward "./layout/forecast.scss";
+@forward "./components/buttons.scss";
 
 * {
   outline: 1px solid black;
@@ -9,58 +13,4 @@ section {
   padding: 1em;
   display: flex;
   justify-content: center;
-}
-
-#search-bar,
-.searchBtn {
-  border: none;
-}
-
-#search-bar {
-  background-color: transparent;
-  border: 0px solid;
-}
-
-.weather-condition,
-.location {
-  text-align: center;
-}
-
-.temp {
-  display: flex;
-  justify-content: center;
-}
-
-.temp * {
-  margin: 0.15em;
-}
-
-.third-container {
-  width: 75%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.hourly,
-.weekly {
-  border: solid 1px black;
-  width: 25%;
-  text-align: center;
-}
-
-.days-container,
-.hours-container {
-  /*   Need to adjust height to make sure it is responsive change 250px*/
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  overflow: auto;
-}
-
-.days,
-.hours {
-  display: grid;
-  row-gap: 1em;
-  grid-template-columns: 1fr 1fr;
 }

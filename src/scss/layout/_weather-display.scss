@@ -1,0 +1,13 @@
+.weather-condition,
+.location {
+  text-align: center;
+}
+
+.temp {
+  display: flex;
+  justify-content: center;
+}
+
+.temp * {
+  margin: 0.15em;
+}
