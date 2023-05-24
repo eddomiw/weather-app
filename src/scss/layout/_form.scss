@@ -3,6 +3,9 @@ form {
   width: fit-content;
   display: flex;
   justify-content: space-between;
+  input:focus {
+    outline: none;
+  }
 }
 
 #search-bar,
