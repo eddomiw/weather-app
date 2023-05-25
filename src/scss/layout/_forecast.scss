@@ -10,13 +10,13 @@
 @media (min-width: 768px) {
   .third-container {
     flex-direction: row;
-    justify-content: space-evenly;
-    gap: 1;
+    // justify-content: space-evenly;
+    gap: 3rem;
   }
 
   .hourly,
   .weekly {
-    width: max(275px, 35%);
+    width: max(275px, 30%);
   }
 }
 

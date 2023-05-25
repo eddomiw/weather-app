@@ -1,5 +1,5 @@
 require("./scss/styles.scss");
 
-import { searchValue } from "./search-location";
+import { searchValue, myForm } from "./search-location";
 
-//TODO: eslint is ruining something about parsing
+//FIXME: eslint is ruining something about parsing
