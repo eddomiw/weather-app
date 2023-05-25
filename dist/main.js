@@ -116,17 +116,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _search_location__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search-location */ \"./src/search-location.js\");\n__webpack_require__(/*! ./scss/styles.scss */ \"./src/scss/styles.scss\");\n\n\n\n//FIXME: eslint is ruining something about parsing\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_search_location__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/search-location */ \"./src/js/search-location.js\");\n__webpack_require__(/*! ./scss/styles.scss */ \"./src/scss/styles.scss\");\n\n\n\n//FIXME: eslint is ruining something about parsing\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/search-location.js":
-/*!********************************!*\
-  !*** ./src/search-location.js ***!
-  \********************************/
+/***/ "./src/js/search-location.js":
+/*!***********************************!*\
+  !*** ./src/js/search-location.js ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   myForm: () => (/* binding */ myForm),\n/* harmony export */   searchValue: () => (/* binding */ searchValue)\n/* harmony export */ });\nconst myForm = document.querySelector(\"#search-form\");\nconst searchBtn = document.querySelector(\".searchBtn\");\nconst searchInput = document.querySelector(\"#search-bar\");\n\nlet searchValue = \"beans\";\n\nsearchBtn.addEventListener(\"click\", (event) => {\n  event.preventDefault();\n  searchValue = searchInput.value;\n  console.log(searchValue);\n});\n\nmyForm.addEventListener(\"submit\", (event) => {\n  event.preventDefault();\n  searchValue = searchInput.value;\n  console.log(searchValue);\n  console.log(\"Enter key pressed!\");\n});\n\n\n//# sourceURL=webpack://weather-app/./src/search-location.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   myForm: () => (/* binding */ myForm),\n/* harmony export */   searchInput: () => (/* binding */ searchInput),\n/* harmony export */   searchValue: () => (/* binding */ searchValue)\n/* harmony export */ });\n/* harmony import */ var _weatherAPI__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weatherAPI */ \"./src/js/weatherAPI.js\");\n\n\nconst myForm = document.querySelector(\"#search-form\");\nconst searchBtn = document.querySelector(\".searchBtn\");\nconst searchInput = document.querySelector(\"#search-bar\");\n\nlet searchValue = \"beans\";\n\nsearchBtn.addEventListener(\"click\", (event) => {\n  event.preventDefault();\n  searchValue = searchInput.value;\n  console.log(searchValue);\n});\n\nmyForm.addEventListener(\"submit\", (event) => {\n  event.preventDefault();\n  searchValue = searchInput.value;\n  console.log(searchValue);\n  console.log(\"Enter key pressed!\");\n  (0,_weatherAPI__WEBPACK_IMPORTED_MODULE_0__.getWeather)(searchValue);\n});\n\n\n//# sourceURL=webpack://weather-app/./src/js/search-location.js?");
+
+/***/ }),
+
+/***/ "./src/js/weatherAPI.js":
+/*!******************************!*\
+  !*** ./src/js/weatherAPI.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getWeather: () => (/* binding */ getWeather)\n/* harmony export */ });\n/* harmony import */ var _search_location__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search-location */ \"./src/js/search-location.js\");\n\n\nasync function getWeather(searchValue) {\n  try {\n    const weatherResponse = await fetch(\n      \"https://api.weatherapi.com/v1/current.json?key=1536e67c0bc746bd870180205231905&q=London&aqi=no\",\n      { mode: \"cors\" }\n    );\n\n    const weatherData = await weatherResponse.json();\n    console.log(weatherData);\n\n    \n  } catch (error) {\n    console.log(error);\n  }\n}\n\n\n//# sourceURL=webpack://weather-app/./src/js/weatherAPI.js?");
 
 /***/ })
 

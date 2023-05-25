@@ -1,6 +1,8 @@
+import { getWeather } from "./weatherAPI";
+
 export const myForm = document.querySelector("#search-form");
 const searchBtn = document.querySelector(".searchBtn");
-const searchInput = document.querySelector("#search-bar");
+export const searchInput = document.querySelector("#search-bar");
 
 export let searchValue = "beans";
 
@@ -15,4 +17,5 @@ myForm.addEventListener("submit", (event) => {
   searchValue = searchInput.value;
   console.log(searchValue);
   console.log("Enter key pressed!");
+  getWeather(searchValue);
 });
