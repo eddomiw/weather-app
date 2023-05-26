@@ -9,8 +9,7 @@ export async function getWeather(searchValue) {
 
     const weatherData = await weatherResponse.json();
     console.log(weatherData);
-
-    
+    console.log(weatherData.current.cloud);
   } catch (error) {
     console.log(error);
   }
