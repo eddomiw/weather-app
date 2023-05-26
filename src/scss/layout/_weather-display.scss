@@ -1,13 +1,16 @@
 .weather-condition,
-.location {
+.weather-location {
   text-align: center;
 }
 
-.temp {
+.temp-container {
   display: flex;
   justify-content: center;
 }
 
-.temp * {
+.temp-container * {
   margin: 0.15em;
 }
+
+//TODO: ADD VALIDATION TO FORM
+//TODO: HIDDEN DISPLAY WHEN LOADING PAGE FIRST TIME

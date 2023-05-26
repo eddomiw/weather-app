@@ -1,5 +1,13 @@
 import { searchValue, myForm } from "./search-location";
 
+const weatherCondition = document.querySelector(".weather-condition");
+const weatherLocation = document.querySelector(".weather-location");
+const temp = document.querySelector("#temp");
+
+const feelsLIke = document.querySelector("#feels-like");
+const humidity = document.querySelector("#humidity");
+const wind = document.querySelector("#wind");
+
 export async function getWeather(searchValue) {
   try {
     const weatherResponse = await fetch(
@@ -9,7 +17,13 @@ export async function getWeather(searchValue) {
 
     const weatherData = await weatherResponse.json();
     console.log(weatherData);
-    console.log(weatherData.current.cloud);
+    weatherCondition.textContent = weatherData.current.condition.text;
+    weatherLocation.textContent = weatherData.location.name;
+    temp.textContent = `${weatherData.current["temp_f"]} °F`;
+
+    feelsLIke.textContent = `${weatherData.current["feelslike_f"]} °F`;
+    humidity.textContent = `${weatherData.current.humidity}% `;
+    wind.textContent = `${weatherData.current.wind_mph} mph`;
   } catch (error) {
     console.log(error);
   }
