@@ -2,7 +2,7 @@
 
 [Live Demo](https://eddomiw.github.io/weather-app/)
 
-<!-- ![Showcase Example](./src/images/todo.gif) -->
+![Showcase Example](./src/images/weather-app.gif)
 
 ## Short Description :
 
