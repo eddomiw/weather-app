@@ -1,8 +1,9 @@
 form {
   border: 1px solid black;
+  height: clamp(25px, 50%, 100px);
   width: fit-content;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   input:focus {
     outline: none;
   }
@@ -13,8 +14,19 @@ form {
   border: none;
 }
 
+.searchBtn img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.searchBtn {
+  background-color: transparentize($color: #524d4d77, $amount: 0);
+}
+
 #search-bar {
-  background-color: transparent;
+  background-color: transparentize($color: #524d4d77, $amount: 0);
+  padding-left: 0.75em;
+  color: white;
   border: 0px solid;
   width: min(265px, 70%);
 }

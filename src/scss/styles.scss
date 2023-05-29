@@ -9,6 +9,12 @@
 //   outline: 1px solid black;
 // }
 
+body {
+  background-image: url(../images/stars2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 section {
   padding: 1em;
   display: flex;
