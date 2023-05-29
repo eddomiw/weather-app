@@ -11,7 +11,9 @@ const wind = document.querySelector("#wind");
 export async function getWeather(searchValue) {
   try {
     const weatherResponse = await fetch(
-      "https://api.weatherapi.com/v1/current.json?key=1536e67c0bc746bd870180205231905&q=London&aqi=no",
+      "https://api.weatherapi.com/v1/current.json?key=1536e67c0bc746bd870180205231905&q=" +
+        searchValue +
+        "&aqi=no",
       { mode: "cors" }
     );
 
