@@ -4,6 +4,9 @@ form {
   width: fit-content;
   display: flex;
   justify-content: center;
+  button {
+    margin-right: 5px;
+  }
   input:focus {
     outline: none;
   }
